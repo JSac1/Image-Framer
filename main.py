@@ -68,7 +68,6 @@ def frame(input_img_path: str,
     
     output_path = os.path.join("output", output_img)
     
-    # framed = set_image_dpi(framed)
     framed =framed.resize((framed.width, framed.height), Image.Resampling.LANCZOS)
     
     framed.save(output_path, dpi=(300, 300), quality=95)
