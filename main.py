@@ -81,40 +81,41 @@ if __name__ == "__main__":
         print("Input folder created. Please add images to the 'input' folder and rerun the script.")
     
     for file in os.listdir("input"):
-        if file.lower().endswith(('.png', '.jpg', '.jpeg')):
-            start_time = time.time()
-            
-            # INSTAX MINI
-            # border_sides=47.2, 
-            # border_top=71.4, 
-            # border_bottom=212, 
-            # frame_width=637.8, 
-            # frame_height=1015.7
-            # frame(f"input/{file}", (637.8, 1015.7), scale=1, border_sides=47.2, border_top=71.4, border_bottom=212)
-            
-            # INSTAX SQUARE
-            # border_sides=59.1, 
-            # border_top=71,  
-            # border_bottom=212.5, 
-            # frame_width=850.4, 
-            # frame_height=1015.7
-            # frame(f"input/{file}", (850.4, 1015.7), scale=1, border_sides=59.1, border_top=71.4, border_bottom=212)
-            
-            # INSTAX WIDE
-            # border_sides=53.2, 
-            # border_top=71.1, 
-            # border_bottom=212.4, 
-            # frame_width=1275.6, 
-            # frame_height=1015.7
-            # frame(f"input/{file}", (1275.6, 1015.7), scale=1, border_sides=53.2, border_top=71.4, border_bottom=212)
-            
-            # POLAROID GO
-            # border_sides=46.7, 
-            # border_top=59.1, 
-            # border_bottom=172.4, 
-            # frame_width=636.6, 
-            # frame_height=786.6
-            # frame(f"input/{file}", (636.6, 786.6), scale=1, border_sides=46.7, border_top=59.1, border_bottom=172.4)
-            frame(f"input/{file}", (1080, 1350), scale=3, border_sides=60, border_top=60, border_bottom=60)
-            print(f"Execution time: {(time.time() - start_time):.2f} seconds")
+        if not file.lower().endswith(('.png', '.jpg', '.jpeg')):
+            continue
+        start_time = time.time()
+        
+        # INSTAX MINI
+        # border_sides=47.2, 
+        # border_top=71.4, 
+        # border_bottom=212, 
+        # frame_width=637.8, 
+        # frame_height=1015.7
+        # frame(f"input/{file}", (637.8, 1015.7), scale=1, border_sides=47.2, border_top=71.4, border_bottom=212)
+        
+        # INSTAX SQUARE
+        # border_sides=59.1, 
+        # border_top=71,  
+        # border_bottom=212.5, 
+        # frame_width=850.4, 
+        # frame_height=1015.7
+        # frame(f"input/{file}", (850.4, 1015.7), scale=1, border_sides=59.1, border_top=71.4, border_bottom=212)
+        
+        # INSTAX WIDE
+        # border_sides=53.2, 
+        # border_top=71.1, 
+        # border_bottom=212.4, 
+        # frame_width=1275.6, 
+        # frame_height=1015.7
+        # frame(f"input/{file}", (1275.6, 1015.7), scale=1, border_sides=53.2, border_top=71.4, border_bottom=212)
+        
+        # POLAROID GO
+        # border_sides=46.7, 
+        # border_top=59.1, 
+        # border_bottom=172.4, 
+        # frame_width=636.6, 
+        # frame_height=786.6
+        # frame(f"input/{file}", (636.6, 786.6), scale=1, border_sides=46.7, border_top=59.1, border_bottom=172.4)
+        frame(f"input/{file}", (1080, 1350), scale=3, border_sides=60, border_top=60, border_bottom=60)
+        print(f"Execution time: {(time.time() - start_time):.2f} seconds")
         
