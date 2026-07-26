@@ -1,7 +1,6 @@
 import typing
 
 from PIL import Image
-import tempfile
 import os
 
 def frame(input_img_path: str, 
